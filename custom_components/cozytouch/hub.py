@@ -591,11 +591,11 @@ class Hub(DataUpdateCoordinator):
                 + str(self._setup["id"]),
                 json=json_data,
                 headers={
-                    "Authorization": f"Bearer Bearer {self._access_token}",
+                    "Authorization": f"Bearer {self._access_token}",
                     "Content-Type": "application/json",
                 },
             ) as response:
-                if response.status == 200:
+                if response.status in (200, 204):
                     if timestampStart is not None and timestampEnd is not None:
                         valueTimestamps = (
                             "[" + str(timestampStart) + "," + str(timestampEnd) + "]"
