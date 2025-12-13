@@ -337,7 +337,7 @@ def get_model_infos(modelId: int, zoneName: str | None = None):
             4: HVACMode.HEAT,
         }
    
-   elif modelId == 1642:
+    elif modelId == 1642:
         modelInfos["name"] = "Atlantic Explorer V5 (270L)"
         modelInfos["type"] = CozytouchDeviceType.WATER_HEATER
         modelInfos["HVACModes"] = {
